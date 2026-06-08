@@ -29,7 +29,7 @@ struct LoginView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
             
-            Button("Login") {
+            Button("Home") {
                 print("Logging in with: \(email)")
             }
             .font(.headline)
