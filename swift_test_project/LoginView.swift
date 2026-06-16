@@ -11,6 +11,8 @@ struct LoginView: View {
     @State var email: String = ""
     @State var password: String = ""
     
+    @State private var isShowingAlert: Bool = false
+    
     var body: some View {
         ScrollView() {
             
@@ -33,8 +35,13 @@ struct LoginView: View {
                     .padding()
                 
                 Button("Home") {
-                    print("Logging in with: \(email)")
-                }
+//                    print("/*Logging*/ in with: \(email)")
+                    isShowingAlert.toggle()
+                       
+                } .sheet(isPresented: $isShowingAlert) {
+                    Text("Hello World")
+                        .padding()
+                    }
                 .font(.headline)
                 .buttonStyle(.borderedProminent) // Gives it a nice native tinted background fill
             }

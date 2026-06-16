@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct BottomNavBar: View {
+    // Optional: Add a state variable to track the active tab explicitly
+    @State private var selectedTab = 0
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView(selection: $selectedTab) {
+            ContentView()
+                .tabItem {
+                    Label("Home", systemImage: "house.fill")
+                }
+                .tag(0)
+            Spacer()
+            LoginView()
+                .tabItem {
+                    Label("Account", systemImage: "person.crop.circle")
+                }
+                .tag(1)
+        }
     }
 }
 
