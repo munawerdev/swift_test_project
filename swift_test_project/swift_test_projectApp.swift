@@ -13,6 +13,7 @@ struct swift_test_projectApp: App {
         WindowGroup {
 //            ContentView()
             BottomNavBar()
+                .preferredColorScheme(.dark)
         }
     }
 }
