@@ -41,7 +41,7 @@ struct BottomNavBar: View {
             }
             
             Tab("Settings", systemImage: "slider.horizontal.3", value: 1) {
-                Text("Settings")
+                Settings()
             }
             
             Tab("Account", systemImage: "person.crop.circle", value: 2) {
@@ -54,5 +54,5 @@ struct BottomNavBar: View {
 
 #Preview {
     BottomNavBar()
-        .preferredColorScheme(.dark)
+//        .preferredColorScheme(.dark)
 }
